@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div id="wholepage" class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img class='img-fluid'src="./photos/save.webp" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <h1>Booking</h1>
+                <form action=""  id="btn"  onsubmit="email(); reset(); return false" >
+                    <input id="name" name="Username" class="form-control" type="text" placeholder="Enter The Name" required>
+                    <input id="mail" name="usermail" class="form-control" type="email" placeholder="Enter The Mail" required>
+                    <select class="form-select" name="Function Type" id="function"  >
+                        <option value="" disabled selected>Select Function Type</option>
+                        <option value="Wedding Shoot">Wedding Shoot</option>
+                        <option value="Baby Showe">Baby Shower</option>
+                        <option value="Baby Shoot">Baby Shoot</option>
+                        <option value="Birthday Shoot">Birthday Shoot</option>
+                    </select>
+                    <input id="phone" name="Phonenumber" class="form-control" type="number" placeholder="Phone Number" required>
+                    <input id="date" name="function date" class="form-control" type="date" name="" id="" required >
+                    <input id="time" name="function time" class="form-control" type="time" required>
+                    <button type="submit">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!-- <div id="modal" class="modal">
+            <div class="modal-header">
+                <p>Confirm Booking!</p><span id="close" class="close">&times</span>
+            </div><br>
+            <div class="modal-content">
+                <p>Your Booking Confirmed!</p>
+                <p>Let's Wait For Few Days To Get Confirmation From Us!!  &#128519</p>
+            </div>
+            <div class="modal-footer">
+                <button id="okbtn">OK</button>
+            </div>
+
+        </div> -->
+   
+
+    
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    // submit btn
+// const btn=document.getElementById("btn")
+
+// btn.addEventListener("submit",()=>{
+          
+// alert(`Your Booking Confirmed! 
+// Let's Wait For Few Days To Get Confirmation From Us!!`)})
+
+const name=document.getElementById("name")
+const mail=document.getElementById("mail")
+const functiontype = document.getElementById("function")
+const number=document.getElementById("phone")
+const date=document.getElementById("date")
+const time=document.getElementById("time")
+
+function email(){
+    Email.send({
+        SecureToken:"8defc493-8080-4521-9f50-9bf9aee07e16",
+    To : 'eckirubakaran370@gmail.com',
+    From : mail.value,
+    Subject : "Booking Details",
+    Body : `Name:${name.value}
+    mail:${mail.value}
+    functiontype:${functiontype.value}
+    number:${number.value}
+    Date:${date.value}
+    Time:${time.value}`
+}).then(
+  message => alert(`Your Booking Confirmed! 
+Let's Wait For Few Days To Get Confirmation From Us!!`)
+);
+}
+</script>
+     
+
+
+
+
+
+
+
+      <!-- <p>  // const modal=document.getElementById("modal")
+       
+        // closebtn
+        // const btnclose=document.getElementById("close")
+        // wholepage
+        // const whole=document.getElementById("wholepage")
+        // modal okbtn
+        // const ok=document.getElementById("okbtn")
+
+        // btn.addEventListener("click",(e)=>{
+        //     e.preventDefault()
+        //     modal.style.display="block"
+        //     modal.style.filter="blur(0)"
+        //     whole.style.filter="blur(3px)"  
+        // })
+        // btnclose.addEventListener("click",()=>{
+        //     modal.style.display="none"
+        //     whole.style.filter="blur(0)"  
+        // })
+        // ok.addEventListener("click",()=>{
+        //     modal.style.display="none"
+        //     whole.style.filter="blur(0)"  
+            
+        // })
+
+
+        // const inpvalue=document.getElementById("input-value")</p> -->
+
+       
+
+        
+
+
+   
+    
+</body>
+</html>

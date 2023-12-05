@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400&family=Prompt:wght@600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    background-color: black;
+
+    overflow-x: hidden;
+}
+#img{
+    width: 500px;
+    height: 500px;
+   padding-top: 2rem;
+    margin-left: 20px;
+    filter: blur(5px);  
+}
+#img:hover{
+    filter: blur(0);
+}
+.para{
+    font-size: 18px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+      color: white;
+}
+button{
+padding: 5px;
+border: 2px solid white;
+border-radius: 20px;
+background-color: wheat;
+border: none;
+margin-bottom: 10px;
+}
+button:active{
+    box-shadow: 4px 4px 4px white;
+}
+button a{
+    text-decoration: none;
+    color: green;
+    background-color: wheat;
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400&family=Prompt:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.container img{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: auto;
+    display: block;
+    height: 300px;
+}
+.container h3{
+    margin-top: 2rem;
+    text-align:center;
+    text-shadow: 4px 4px 4px wheat;
+}
+p{
+    font-size: 20px;
+    color: white;
+}
+.price{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    background-color: rgb(41, 41, 194);
+    border-radius: 20px;
+    color: white;
+}

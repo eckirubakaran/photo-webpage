@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400&family=Prompt:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(166, 153, 153);
+    color: white;
+}
+nav h2{
+    font-weight: 500;
+    text-shadow: 3px 3px 3px black;
+    margin-left: 10px;
+}
+/* system view */
+@media  screen and (min-width:720px) {
+
+   #menubar{
+        display: none;
+    }
+    nav div{
+        position: absolute;
+        right: 0rem;
+        top: 10px;
+    
+    }
+    nav div ul{
+        display: flex;
+        /* margin-right: 10px;   */
+    }
+    nav div ul li {
+        margin-right: 15px;
+        list-style-type: none;
+        color: grey;
+       
+    }
+    nav div ul li a{
+        text-decoration: none;
+        color: white;
+       transition:border-bottom 0.5s ease-in;
+       border-bottom: 5px solid transparent;
+       text-shadow: 3px 3px 3px black;
+    }
+    nav div ul li a:hover{
+        border-bottom: 5px solid black;
+    }
+}
+/* mobile view */
+@media  screen and (max-width:720px){
+
+    #menubar{
+       position: absolute;
+       right: 9px;
+       top: 6px;
+       text-shadow: 3px 3px 3px black;
+    }
+    .hide{
+        display: none;
+       
+    }
+    nav div ul li {
+        margin-top: 15px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        list-style-type: none;
+        color: grey;   
+    }
+    nav div ul li a{
+         text-decoration: none;
+         color:white;
+         transition:border-bottom 0.5s ease-in;
+         border-bottom: 3px solid transparent;
+         font-weight: 900; 
+         font-size: 20px;   
+    }
+    nav div ul li a:hover{
+        border-bottom: 5px solid black;
+    }
+}
+
+/* home page */
+
+section{
+    width: 100%;
+    height: 93vh;
+}
+#home{
+    background-image: url("./photos/home.jpg") ;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+ .home-1{
+   
+    color: white;
+    text-shadow: 4px 4px 4px gray;
+    font-weight: 600;
+    font-size: 2rem;   
+   
+}
+.home-2{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-shadow: 4px 4px 4px gray;
+}
+button{
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+button a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    text-shadow:4px 4px 4px grey ;
+}
+
+/* about us */
+
+
+
